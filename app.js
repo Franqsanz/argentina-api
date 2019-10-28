@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
 
-const config = require('./config');
+const config = require('./config/config');
 const index = require('./routes/index');
-require('./conexionDB');
+require('./config/conexionDB');
 
 const app = express();
 
