@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const products = require('../model/product');
 
 router.get('/', (req, res) => {

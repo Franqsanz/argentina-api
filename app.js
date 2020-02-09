@@ -5,10 +5,14 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-// const joi = require('@hapi/joi');
+const joi = require('@hapi/joi');
+const csurf = require('csurf');
+const expressRateLimit = require('express-rate-limit');
+const expressMongoSanitize = require('express-mongo-sanitize');
 
 const config = require('./config/config');
 const index = require('./routes/index');
+const cities = require('./routes/citiesRoutes');
 require('./config/conexionDB');
 
 const app = express();
@@ -37,5 +41,18 @@ app.use(
 
 app.use(morgan('dev'));
 app.use('/', index);
+app.use('/api/v2', cities);
+
+// validacion de campos
+/*const schema = joi.object({
+  username: joi
+    .string()
+    .alphanum()
+    .min(3)
+    .max(20)
+    .required()
+});
+
+schema.validate();*/
 
 app.listen(config.Port, () => console.log(`server on port ${config.Port}`));

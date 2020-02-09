@@ -4,10 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "mocha",
-    "inspection": "eslint ./"
+    "inspection": "eslint ./",
+    "debugger": "node --inspect app.js"
   },
-  "author": "",
+  "author": "franco sanchez",
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^16.1.7",
@@ -28,6 +30,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-node": "^4.0.0",
     "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "mocha": "^6.2.0",

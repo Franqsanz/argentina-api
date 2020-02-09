@@ -6,7 +6,7 @@ const products = new schema({
     producto: String,
     categoria: String,
     precio: Number,
-    date: { type: Date, default: Date.now }
-});
+    // date: { type: Date, default: Date.now }
+}, { versionKey: false });
 
 module.exports = mongoose.model('products', products);
