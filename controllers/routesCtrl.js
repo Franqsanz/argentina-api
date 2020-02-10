@@ -33,7 +33,14 @@ function postApiCities(req, res) {
         latitude: req.body.latitude,
         longitude: req.body.longitude,
         populations: req.body.populations,
-        province: req.body.province
+        province: req.body.province,
+        departments: {
+            name: req.body.department,
+            peoples: {
+                name: req.body.village,
+                populations: req.body.populationsPeoples,
+            }
+        }
     });
 
     newCity.save((err, data) => console.log(data));
@@ -42,12 +49,13 @@ function postApiCities(req, res) {
 
 function deleteApiCities(req, res) {
     let cityId = req.params.cityId;
-    let updated = req.body;
 
-    citiesModel.findByIdAndUpdate(cityId, updated, (err, cityUpdate) => {
-        res.status(200).send({
-            mensaje: 'su producto a sido actualizado',
-            citiesModel: cityUpdate
+    citiesModel.findById(cityId, (err, cityDelete) => {
+        cityDelete.remove(() => {
+            res.send({
+                mensaje: 'su producto a sido borrado',
+                citiesModel: cityDelete
+            });
         });
     });
 }

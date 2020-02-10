@@ -11,7 +11,6 @@ const expressRateLimit = require('express-rate-limit');
 const expressMongoSanitize = require('express-mongo-sanitize');
 
 const config = require('./config/config');
-const index = require('./routes/index');
 const cities = require('./routes/citiesRoutes');
 require('./config/conexionDB');
 
@@ -40,7 +39,6 @@ app.use(
 // });
 
 app.use(morgan('dev'));
-app.use('/', index);
 app.use('/api/v2', cities);
 
 // validacion de campos

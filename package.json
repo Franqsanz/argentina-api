@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "mocha",
-    "inspection": "eslint ./",
-    "debugger": "node --inspect app.js"
+    "inspection": "eslint ./"
   },
   "author": "franco sanchez",
   "license": "ISC",
