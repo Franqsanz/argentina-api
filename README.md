@@ -1,9 +1,23 @@
-## APIRestFull con Node.js (Express) y MongoDB
+## API Rest Full Node.js (Express) y MongoDB
 
-correr la api con el siguiente comando: `node app.js`
+>Correr la API con el siguiente comando: `node app.js`
 
-#### Tecnologias utilizadas:
+>Esta API contiene datos de las Povincias, sus ciudades y departamentos de Argentina.
 
-* MongoDB como motor de BD
+#### Tecnologias
+
 * Express como marco para node
+* MongoDB como motor de Base de Datos
+
+#### Dependecias NPM
+* Helmet
+* Cors
+* Joi
+* Csurf
+* Express Rate Limit
+* Express Mongo Sanitize
 * ESLint
+* Prettier
+___
+**Aún en construccion...**
+___
