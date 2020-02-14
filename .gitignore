@@ -1,3 +1,4 @@
 .prettierrc
 test
 node_modules/
+.evn
