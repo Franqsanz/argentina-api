@@ -1,3 +1,4 @@
+/* eslint-disable node/no-unpublished-require */
 'use strict';
 
 const express = require('express');
@@ -9,6 +10,7 @@ const joi = require('@hapi/joi');
 const csurf = require('csurf');
 const expressRateLimit = require('express-rate-limit');
 const expressMongoSanitize = require('express-mongo-sanitize');
+require('dotenv').config();
 
 const config = require('./config/config');
 const cities = require('./routes/citiesRoutes');
@@ -26,18 +28,6 @@ app.use(
     methods: 'GET, POST, OPTIONS, PUT, DELETE'
   })
 );
-// configuracion de CORS para transportar la API
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header(
-//     'Acces-Control-Allow-Headers',
-//     'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Methond'
-//   );
-//   res.header('Acces-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-//   res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-//   next();
-// });
-
 app.use(morgan('dev'));
 app.use('/api/v2', cities);
 

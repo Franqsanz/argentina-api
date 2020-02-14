@@ -1,4 +1,4 @@
 module.exports = {
-  Port: process.env.PORT || 3200,
-  db: process.env.MONGODB || 'mongodb://localhost/Api'
+  Port: process.env.PORT || process.env.PORT_LOCAL,
+  db: process.env.MONGODB_URI || process.env.MONGODB_LOCAL
 };

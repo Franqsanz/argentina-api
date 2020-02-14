@@ -1,8 +1,8 @@
-## API Rest Full Node.js (Express) y MongoDB
+## API Rest Full Node.js y MongoDB
 
->Correr la API con el siguiente comando: `node app.js`
+>Correr la API con el siguiente comando: `npm start`
 
->Esta API contiene datos de las Povincias, sus ciudades y departamentos de Argentina.
+>Esta API contiene datos de provincias, sus ciudades y departamentos de Argentina.
 
 #### Tecnologias
 

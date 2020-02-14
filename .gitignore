@@ -1,4 +1,3 @@
 .prettierrc
-*test-eslint-prettier
 test
 node_modules/
