@@ -1,4 +1,4 @@
-## API Rest Full Node.js y MongoDB
+## API Rest Full Node.js
 
 >Correr la API con el siguiente comando: `npm start`
 
