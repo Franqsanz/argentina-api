@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable prettier/prettier */
 const router = require('express').Router();
 const routesCities = require('../controllers/routesCtrl')

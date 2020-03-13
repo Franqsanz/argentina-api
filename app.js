@@ -29,7 +29,7 @@ app.use(
   })
 );
 app.use(morgan('dev'));
-app.use('/api/v2', cities);
+app.use('/api/v1', cities);
 
 // validacion de campos
 /*const schema = joi.object({

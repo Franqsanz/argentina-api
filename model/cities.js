@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable prettier/prettier */
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -14,7 +16,7 @@ const department = new Schema({
 
 const cities = new Schema({
     city: String,
-    rack: Number,
+    rank: Number,
     latitude: Number,
     longitude: Number,
     populations: String,

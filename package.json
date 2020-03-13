@@ -1,15 +1,19 @@
 {
-  "name": "apirest",
+  "name": "API-Rest",
   "version": "1.0.0",
-  "description": "",
+  "description": "Esta API contiene datos de provincias, sus ciudades y departamentos de Argentina. Aún en Desarrollo...",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "test": "mocha",
-    "inspection": "eslint ./"
+    "lint": "eslint ./"
   },
-  "author": "franco sanchez",
-  "license": "ISC",
+  "keywords": [
+    "api",
+    "api-rest-full"
+  ],
+  "author": "Franco Andrés Sánchez",
+  "license": "MIT",
   "dependencies": {
     "@hapi/joi": "^16.1.7",
     "@types/hapi__joi": "^16.0.3",
