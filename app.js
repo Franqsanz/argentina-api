@@ -10,6 +10,7 @@ const joi = require('@hapi/joi');
 const csurf = require('csurf');
 const expressRateLimit = require('express-rate-limit');
 const expressMongoSanitize = require('express-mongo-sanitize');
+const expressPagination = require('express-simple-pagination');
 require('dotenv').config();
 
 const config = require('./config/config');
