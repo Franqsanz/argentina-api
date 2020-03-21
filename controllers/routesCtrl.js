@@ -3,59 +3,60 @@
 /* eslint-disable prettier/prettier */
 const citiesModel = require('../model/cities');
 
-function getApiCities(req, res) {
+function getCities(req, res) {
     citiesModel.find((err, cities) => {
         res.send({ cities: cities });
     });
 }
 
-function getFindOneApiCities(req, res) {
+function getFindOneCities(req, res) {
     let cityId = req.params.cityId;
     citiesModel.findById(cityId, (err, cities) => {
         res.send({ cities: cities });
     });
 }
 
-function putApiCities(req, res) {
+function putCities(req, res) {
     let cityId = req.params.cityId;
     let updated = req.body;
 
     citiesModel.findByIdAndUpdate(cityId, updated, (err, cityUpdate) => {
         res.status(200).send({
-            mensaje: 'su producto a sido actualizado',
+            mensaje: 'Esta ciudad se a actualizado',
             citiesModel: cityUpdate
         });
     });
 }
 
-function postApiCities(req, res) {
+function postCities(req, res) {
     let newCity = new citiesModel({
+        _id: req.body.id,
         city: req.body.city,
-        rack: req.body.rack,
+        rank: req.body.rank,
         latitude: req.body.latitude,
         longitude: req.body.longitude,
         populations: req.body.populations,
         province: req.body.province,
-        departments: {
-            name: req.body.department,
-            peoples: {
-                name: req.body.village,
-                populations: req.body.populationsPeoples,
-            }
-        }
+        // departments: {
+        //     name: req.body.department,
+        //     peoples: {
+        //         name: req.body.village,
+        //         populations: req.body.populationsPeoples,
+        //     }
+        // }
     });
 
     newCity.save((err, data) => console.log(data));
-    res.redirect('/api/v2/cities')
+    res.redirect('/api/v1/cities')
 }
 
-function deleteApiCities(req, res) {
+function deleteCities(req, res) {
     let cityId = req.params.cityId;
 
     citiesModel.findById(cityId, (err, cityDelete) => {
         cityDelete.remove(() => {
             res.send({
-                mensaje: 'su producto a sido borrado',
+                mensaje: 'Esta ciudad a sido borrada',
                 citiesModel: cityDelete
             });
         });
@@ -63,9 +64,9 @@ function deleteApiCities(req, res) {
 }
 
 module.exports = {
-    getApiCities,
-    getFindOneApiCities,
-    putApiCities,
-    postApiCities,
-    deleteApiCities
+    getCities,
+    getFindOneCities,
+    putCities,
+    postCities,
+    deleteCities
 };

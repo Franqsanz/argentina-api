@@ -1,6 +1,7 @@
 /* eslint-disable node/no-unpublished-require */
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -11,7 +12,6 @@ const csurf = require('csurf');
 const expressRateLimit = require('express-rate-limit');
 const expressMongoSanitize = require('express-mongo-sanitize');
 const expressPagination = require('express-simple-pagination');
-require('dotenv').config();
 
 const config = require('./config/config');
 const cities = require('./routes/citiesRoutes');
@@ -21,7 +21,7 @@ const app = express();
 
 app.use(helmet());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS
 app.use(
@@ -31,17 +31,5 @@ app.use(
 );
 app.use(morgan('dev'));
 app.use('/api/v1', cities);
-
-// validacion de campos
-/*const schema = joi.object({
-  username: joi
-    .string()
-    .alphanum()
-    .min(3)
-    .max(20)
-    .required()
-});
-
-schema.validate();*/
 
 app.listen(config.Port, () => console.log(`server on port ${config.Port}`));
