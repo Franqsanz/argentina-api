@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const joi = require('@hapi/joi');
 const csurf = require('csurf');
 const expressRateLimit = require('express-rate-limit');
 const expressMongoSanitize = require('express-mongo-sanitize');

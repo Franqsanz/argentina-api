@@ -16,12 +16,30 @@ const Schema = mongoose.Schema;
 
 const cities = new Schema({
     _id: Number,
-    city: String,
-    rank: Number,
-    latitude: Number,
-    longitude: Number,
-    populations: String,
-    province: String,
+    city: {
+        type: String,
+        required: true
+    },
+    rank: {
+        type: Number,
+        required: true
+    },
+    latitude: {
+        type: Number,
+        required: true
+    },
+    longitude: {
+        type: Number,
+        required: true
+    },
+    populations: {
+        type: String,
+        required: true
+    },
+    province: {
+        type: String,
+        required: true
+    },
     // departments: [department]
 }, { versionKey: false });
 
