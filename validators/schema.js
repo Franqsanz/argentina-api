@@ -5,6 +5,8 @@
 const joi = require('@hapi/joi');
 
 const schema = joi.object({
+    id: joi.number()
+        .required(),
     city: joi.string()
         .trim()
         .required()

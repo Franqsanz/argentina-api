@@ -1,8 +1,10 @@
-# API Rest Full Node.js
+# Provinces Argentina API
 
-> Correr la API con el siguiente comando: `npm start`
+>API Rest Full Node.js
 
-> Esta API contiene datos de provincias, sus ciudades y departamentos de Argentina.
+> Correr la API en local con el siguiente comando: `npm start`
+
+> Esta API contiene datos de provincias, su ciudad capital, poblacion y rango de Argentina.
 
 #### Tecnologias
 
@@ -13,15 +15,36 @@
 
 - Helmet
 - Cors
-- Joi
-- Csurf
+- hapi/Joi
 - Express Rate Limit
 - Express Mongo Sanitize
-- ESLint
-- Prettier
 
+___
+*Sample request*
+
+```
+http://localhost:33528/api/v1/cities/
+```
+
+```js
+{
+    "_id": 1,
+    "city": "Buenos Aires",
+    "rank": 1,
+    "latitude": -31.4217247,
+    "longitude": -64.1858136,
+    "populations": "2000000",
+    "province": "Buenos Aires"
+},
+{
+    "_id": 2,
+    "city": "Cordoba",
+    "rank": 2,
+    "latitude": -31.4217247,
+    "longitude": -64.1858136,
+    "populations": "2000000",
+    "province": "Cordoba"
+}
+```
 ---
-
 **Aún en Desarrollo...**
-
----

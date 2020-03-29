@@ -8,9 +8,9 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 const csurf = require('csurf');
-const expressRateLimit = require('express-rate-limit');
-const expressMongoSanitize = require('express-mongo-sanitize');
-const expressPagination = require('express-simple-pagination');
+const rateLimit = require('express-rate-limit');
+const mongoSanitize = require('express-mongo-sanitize');
+const pagination = require('express-simple-pagination');
 
 const config = require('./config/config');
 const cities = require('./routes/citiesRoutes');
@@ -18,9 +18,20 @@ require('./config/conexionDB');
 
 const app = express();
 
-app.use(helmet());
+app.use(
+  helmet({
+    xssFilter: true,
+    frameguard: true,
+    hsts: true
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  mongoSanitize({
+    replaceWith: '_'
+  })
+);
 
 // CORS
 app.use(
