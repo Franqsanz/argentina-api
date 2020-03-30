@@ -23,7 +23,7 @@ ___
 *Sample request*
 
 ```
-http://localhost:33528/api/v1/cities/
+http://localhost:33528/api/v1/provinces/
 ```
 
 ```js

@@ -1,7 +1,7 @@
 'use strict';
 
 /* eslint-disable prettier/prettier */
-const citiesModel = require('../model/cities');
+const provincesModel = require('../model/cities');
 
 const getCities = async (req, res) => {
     // citiesModel.find((err, cities) => {
@@ -9,7 +9,7 @@ const getCities = async (req, res) => {
     // });
 
     try {
-        const provinces = await citiesModel.find();
+        const provinces = await provincesModel.find();
         return res.status(200).send(provinces);
     } catch (error) {
         return res.status(500).send({ 'error': error });
@@ -18,13 +18,13 @@ const getCities = async (req, res) => {
 
 const getFindOneCities = async (req, res) => {
     // let cityId = req.params.cityId;
-    // citiesModel.findById(cityId, (err, cities) => {
+    // provincesModel.findById(cityId, (err, cities) => {
     //     res.send({ cities: cities });
     // });
 
     try {
         let _id = req.params.cityId;
-        const province = await citiesModel.findById({ _id });
+        const province = await provincesModel.findById({ _id });
         if (!province) {
             return res.status(404).send('Is province does not exist');
         } else {
@@ -39,10 +39,10 @@ const putCities = async (req, res) => {
     // let cityId = req.params.cityId;
     // let updated = req.body;
 
-    // citiesModel.findByIdAndUpdate(cityId, updated, (err, cityUpdate) => {
+    // provincesModel.findByIdAndUpdate(cityId, updated, (err, cityUpdate) => {
     //     res.status(200).send({
     //         mensaje: 'Esta ciudad se a actualizado',
-    //         citiesModel: cityUpdate
+    //         provincesModel: cityUpdate
     //     });
     // });
 
@@ -57,10 +57,10 @@ const putCities = async (req, res) => {
             province
         } = req.body;
 
-        let provinceUpdate = await citiesModel.findOne({ _id });
+        let provinceUpdate = await provincesModel.findOne({ _id });
 
         if (!provinceUpdate) {
-            provinceUpdate = await citiesModel.create({
+            provinceUpdate = await provincesModel.create({
                 city,
                 rank,
                 latitude,
@@ -86,7 +86,7 @@ const putCities = async (req, res) => {
 }
 
 const postCities = async (req, res) => {
-    // let newCity = new citiesModel({
+    // let newCity = new provincesModel({
     //     _id: req.body.id,
     //     city: req.body.city,
     //     rank: req.body.rank,
@@ -110,7 +110,7 @@ const postCities = async (req, res) => {
             province
         } = req.body;
 
-        const provinces = await citiesModel.create({
+        const provinces = await provincesModel.create({
             _id,
             city,
             rank,
@@ -128,18 +128,18 @@ const postCities = async (req, res) => {
 const deleteCities = async (req, res) => {
     // let cityId = req.params.cityId;
 
-    // citiesModel.findById(cityId, (err, cityDelete) => {
+    // provincesModel.findById(cityId, (err, cityDelete) => {
     //     cityDelete.remove(() => {
     //         res.send({
     //             mensaje: 'Esta ciudad a sido borrada',
-    //             citiesModel: cityDelete
+    //             provincesModel: cityDelete
     //         });
     //     });
     // });
 
     try {
         let _id = req.params.cityId;
-        const province = await citiesModel.deleteOne({ _id });
+        const province = await provincesModel.deleteOne({ _id });
         if (province.deletedCount === 0) {
             return res.status(404).send();
         } else {

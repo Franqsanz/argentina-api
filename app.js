@@ -13,7 +13,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const pagination = require('express-simple-pagination');
 
 const config = require('./config/config');
-const cities = require('./routes/citiesRoutes');
+const provinces = require('./routes/provinces');
 require('./config/conexionDB');
 
 const app = express();
@@ -40,6 +40,6 @@ app.use(
   })
 );
 app.use(morgan('dev'));
-app.use('/api/v1', cities);
+app.use('/api/v1', provinces);
 
 app.listen(config.Port, () => console.log(`server on port ${config.Port}`));

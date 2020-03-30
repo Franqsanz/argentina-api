@@ -4,16 +4,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// const village = new Schema({
-//     name: String,
-//     populations: String
-// });
-
-// const department = new Schema({
-//     name: String,
-//     peoples: [village]
-// });
-
 const cities = new Schema({
     _id: Number,
     city: {
