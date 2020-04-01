@@ -1,6 +1,6 @@
 # Provinces Argentina API
 
->API Rest Full Node.js
+API Rest Full Node.js
 
 > Correr la API en local con el siguiente comando: `npm start`
 
@@ -19,8 +19,9 @@
 - Express Rate Limit
 - Express Mongo Sanitize
 
-___
-*Sample request*
+---
+
+<!-- _Sample request_
 
 ```
 http://localhost:33528/api/v1/provinces/
@@ -46,5 +47,7 @@ http://localhost:33528/api/v1/provinces/
     "province": "Cordoba"
 }
 ```
----
+
+--- -->
+
 **Aún en Desarrollo...**
