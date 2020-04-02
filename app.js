@@ -7,14 +7,14 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const csurf = require('csurf');
-const rateLimit = require('express-rate-limit');
+// const csurf = require('csurf');
+// const rateLimit = require('express-rate-limit');
 const mongoSanitize = require('express-mongo-sanitize');
-const pagination = require('express-simple-pagination');
+// const pagination = require('express-simple-pagination');
 
 const config = require('./config/config');
 const provinces = require('./routes/provinces');
-require('./config/conexionDB');
+require('./config/connectionDB');
 
 const app = express();
 
@@ -34,11 +34,7 @@ app.use(
 );
 
 // CORS
-app.use(
-  cors({
-    methods: 'GET, POST, OPTIONS, PUT, DELETE'
-  })
-);
+app.use(cors());
 app.use(morgan('dev'));
 app.use('/api/v1', provinces);
 
