@@ -1,9 +1,9 @@
 'use strict';
 
 /* eslint-disable prettier/prettier */
-const provincesModel = require('../model/cities');
+const provincesModel = require('../model/provinces');
 
-const getCities = async (req, res) => {
+const getProvincesAll = async (req, res) => {
     // citiesModel.find((err, cities) => {
     //     res.send({ cities: cities });
     // });
@@ -16,14 +16,14 @@ const getCities = async (req, res) => {
     }
 }
 
-const getFindOneCities = async (req, res) => {
+const getFindOneProvinces = async (req, res) => {
     // let cityId = req.params.cityId;
     // provincesModel.findById(cityId, (err, cities) => {
     //     res.send({ cities: cities });
     // });
 
     try {
-        let _id = req.params.cityId;
+        let _id = req.params.provinceId;
         const province = await provincesModel.findById({ _id });
         if (!province) {
             return res.status(404).send('Is province does not exist');
@@ -35,7 +35,7 @@ const getFindOneCities = async (req, res) => {
     }
 }
 
-const putCities = async (req, res) => {
+const putProvinces = async (req, res) => {
     // let cityId = req.params.cityId;
     // let updated = req.body;
 
@@ -47,7 +47,7 @@ const putCities = async (req, res) => {
     // });
 
     try {
-        let _id = req.params.cityId;
+        let _id = req.params.provinceId;
         const {
             city,
             rank,
@@ -85,7 +85,7 @@ const putCities = async (req, res) => {
     }
 }
 
-const postCities = async (req, res) => {
+const postProvinces = async (req, res) => {
     // let newCity = new provincesModel({
     //     _id: req.body.id,
     //     city: req.body.city,
@@ -125,7 +125,7 @@ const postCities = async (req, res) => {
     }
 }
 
-const deleteCities = async (req, res) => {
+const deleteProvinces = async (req, res) => {
     // let cityId = req.params.cityId;
 
     // provincesModel.findById(cityId, (err, cityDelete) => {
@@ -138,7 +138,7 @@ const deleteCities = async (req, res) => {
     // });
 
     try {
-        let _id = req.params.cityId;
+        let _id = req.params.provinceId;
         const province = await provincesModel.deleteOne({ _id });
         if (province.deletedCount === 0) {
             return res.status(404).send();
@@ -151,9 +151,9 @@ const deleteCities = async (req, res) => {
 }
 
 module.exports = {
-    getCities,
-    getFindOneCities,
-    putCities,
-    postCities,
-    deleteCities
+    getProvincesAll,
+    getFindOneProvinces,
+    putProvinces,
+    postProvinces,
+    deleteProvinces
 };

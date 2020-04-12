@@ -6,13 +6,11 @@ const options = {
   useUnifiedTopology: true
 };
 
-// mongoose
-//   .connect(config.db, options)
-//   .then(() => console.log('Data Base Conect'));
-
 mongoose.connect(config.db, options);
 mongoose.Promise = global.Promise;
+mongoose.set('useCreateIndex', true);
 
-mongoose.connection.on('error', err => {
-  console.error(`→ ${err.message}`);
-});
+const db = mongoose.connection;
+
+db.on('error', err => console.error(`→ ${err.message}`));
+db.once('open', () => console.log('DB Connection'));

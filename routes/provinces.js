@@ -2,13 +2,13 @@
 
 /* eslint-disable prettier/prettier */
 const router = require('express').Router();
-const routesCities = require('../controllers/routesCtrl');
+const routesProv = require('../controllers/routesCtrl');
 const validator = require('../validators/validator');
 
-router.get('/provinces', routesCities.getCities);
-router.get('/provinces/:cityId', routesCities.getFindOneCities);
-router.post('/provinces', validator, routesCities.postCities);
-router.put('/provinces/:cityId', routesCities.putCities);
-router.delete('/provinces/:cityId', routesCities.deleteCities);
+router.get('/provinces', routesProv.getProvincesAll);
+router.get('/provinces/:provinceId', routesProv.getFindOneProvinces);
+router.post('/provinces', validator, routesProv.postProvinces);
+router.put('/provinces/:provinceId', routesProv.putProvinces);
+router.delete('/provinces/:provinceId', routesProv.deleteProvinces);
 
 module.exports = router

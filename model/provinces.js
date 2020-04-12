@@ -3,14 +3,10 @@
 /* eslint-disable prettier/prettier */
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// const connet = require('../config/connectionDB');
-// const increment = require('mongoose-auto-increment');
+// const autoIncrement = require('mongoose-sequence')(mongoose);
 
-// increment.initialize(connet);
-
-const cities = new Schema({
-    _id: { type: Number },
-    // cityId: { type: Schema.Types.ObjectId, ref: 'id' },
+const provincesArgentina = new Schema({
+    _id: Number,
     city: {
         type: String,
         required: true
@@ -35,8 +31,7 @@ const cities = new Schema({
         type: String,
         required: true
     },
-    // departments: [department]
 }, { versionKey: false });
 
-// cities.plugin(connet.plugin, 'cities');
-module.exports = mongoose.model('cities', cities);
+// cities.plugin(autoIncrement, { inc_field: ' id ' });
+module.exports = mongoose.model('provincesArgentina', provincesArgentina);

@@ -1,4 +1,4 @@
-.prettierrc
 .env
+.prettierrc
 test
 node_modules/
