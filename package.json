@@ -2,9 +2,9 @@
   "name": "Province-Argentina-API",
   "version": "1.0.0",
   "description": "Esta API contiene datos de provincias, sus ciudades y departamentos de Argentina. Aún en Desarrollo...",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon server.js",
     "test": "mocha",
     "lint": "eslint ./"
   },

@@ -16,6 +16,7 @@ const provinces = require('./routes/provinces');
 require('./config/connectionDB');
 const resolvers = require('./graphql/resolvers');
 const typeDefs = require('./graphql/typeDefs');
+const Provinces = require('./graphql/sources');
 
 const app = express();
 
@@ -33,10 +34,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: true,
-  playground: true
-  // dataSources: () => ({
-  //   provinces: () => new provinces()
-  // })
+  playground: true,
+  dataSources: () => ({
+    provinces: () => new Provinces()
+  })
 });
 
 app.use(express.json());
