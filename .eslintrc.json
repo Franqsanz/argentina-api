@@ -25,6 +25,7 @@
     "no-unused-vars": "warn",
     "no-console": "off",
     "no-undef": "off",
-    "func-names": "off"
+    "func-names": "off",
+    // "node/no-unsupported-features/es-syntax": "off"
   }
 }

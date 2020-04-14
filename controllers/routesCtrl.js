@@ -1,6 +1,6 @@
 'use strict';
-
 /* eslint-disable prettier/prettier */
+
 const provincesModel = require('../model/provinces');
 
 const getProvincesAll = async (req, res) => {

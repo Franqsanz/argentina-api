@@ -1,5 +1,5 @@
-/* eslint-disable node/no-unpublished-require */
 'use strict';
+/* eslint-disable node/no-unpublished-require */
 
 require('dotenv').config();
 const express = require('express');
@@ -16,7 +16,7 @@ const provinces = require('./routes/provinces');
 require('./config/connectionDB');
 const resolvers = require('./graphql/resolvers');
 const typeDefs = require('./graphql/typeDefs');
-const Provinces = require('./graphql/sources');
+const { Provinces } = require('./graphql/sources');
 
 const app = express();
 
@@ -58,7 +58,7 @@ server.applyMiddleware({ app });
 
 app.listen(config.Port, () =>
   console.log(`
-  REST http://localhost:${config.Port}/api/v1/provinces
-  GraphQL http://localhost:${config.Port}${server.graphqlPath}
+  REST ➡  http://localhost:${config.Port}/api/v1/provinces
+  GraphQL ➡  http://localhost:${config.Port}${server.graphqlPath}
   `)
 );

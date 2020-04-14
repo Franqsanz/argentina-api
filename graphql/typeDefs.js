@@ -1,5 +1,5 @@
-/* eslint-disable prettier/prettier */
 'use strict';
+/* eslint-disable prettier/prettier */
 
 const { gql } = require('apollo-server-express');
 

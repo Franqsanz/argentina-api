@@ -1,6 +1,6 @@
+'use strict';
 /* eslint-disable prettier/prettier */
 /* eslint-disable node/no-unpublished-require */
-'use strict';
 
 const schema = require('./schema');
 

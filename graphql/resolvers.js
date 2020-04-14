@@ -1,9 +1,11 @@
-/* eslint-disable prettier/prettier */
 'use strict';
+/* eslint-disable prettier/prettier */
 
 const resolvers = {
     Query: {
-        provinces: () => provinces()
+        provinces: async (_, { dataSources }) => {
+            await dataSources.province.provinces();
+        }
     }
 }
 
