@@ -49,7 +49,7 @@ const putProvinces = async (req, res) => {
     try {
         let _id = req.params.provinceId;
         const {
-            city,
+            capitalCity,
             rank,
             latitude,
             longitude,
@@ -61,7 +61,7 @@ const putProvinces = async (req, res) => {
 
         if (!provinceUpdate) {
             provinceUpdate = await provincesModel.create({
-                city,
+                capitalCity,
                 rank,
                 latitude,
                 longitude,
@@ -70,7 +70,7 @@ const putProvinces = async (req, res) => {
             });
             return res.status(201).send(provinceUpdate);
         } else {
-            provinceUpdate.city = city
+            provinceUpdate.capitalCity = capitalCity
             provinceUpdate.rank = rank
             provinceUpdate.latitude = latitude
             provinceUpdate.longitude = longitude
@@ -102,7 +102,7 @@ const postProvinces = async (req, res) => {
     try {
         const _id = req.body.id;
         const {
-            city,
+            capitalCity,
             rank,
             latitude,
             longitude,
@@ -112,7 +112,7 @@ const postProvinces = async (req, res) => {
 
         const provinces = await provincesModel.create({
             _id,
-            city,
+            capitalCity,
             rank,
             latitude,
             longitude,

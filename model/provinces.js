@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 
 const provincesArgentina = new Schema({
     _id: Number,
-    city: {
+    capitalCity: {
         type: String,
         required: true
     },

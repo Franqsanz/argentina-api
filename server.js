@@ -36,7 +36,7 @@ const server = new ApolloServer({
   introspection: true,
   playground: true,
   dataSources: () => ({
-    provinces: () => new Provinces()
+    provinces: new Provinces()
   })
 });
 
