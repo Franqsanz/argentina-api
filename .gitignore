@@ -1,5 +1,5 @@
 .prettierrc
 node_modules
+.env
 graphql
 .nyc_output
-.env
