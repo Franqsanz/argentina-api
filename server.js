@@ -3,10 +3,10 @@
 
 require('dotenv').config();
 const express = require('express');
+const compression = require('compression');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-// const csurf = require('csurf');
 const mongoSanitize = require('express-mongo-sanitize');
 // const pagination = require('express-simple-pagination');
 const { ApolloServer } = require('apollo-server-express');
@@ -16,7 +16,7 @@ const provinces = require('./routes/provinces');
 require('./config/connectionDB');
 const resolvers = require('./graphql/resolvers');
 const typeDefs = require('./graphql/typeDefs');
-const { Provinces } = require('./graphql/sources');
+const { ProvinceApi } = require('./graphql/sources');
 
 const app = express();
 
@@ -30,13 +30,15 @@ app.use(
   })
 );
 
+app.use(compression());
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: true,
   playground: true,
   dataSources: () => ({
-    provinces: new Provinces()
+    provincesApi: new ProvinceApi()
   })
 });
 
@@ -62,3 +64,5 @@ app.listen(config.Port, () =>
   GraphQL ➡  http://localhost:${config.Port}${server.graphqlPath}
   `)
 );
+
+// module.exports = app;

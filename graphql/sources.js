@@ -4,19 +4,22 @@
 const config = require('../config/config');
 const { RESTDataSource } = require('apollo-datasource-rest');
 
-// const baseUrl = `http://localhost:${config.Port}/api/v1/`;
+const baseURL = `http://localhost:${config.Port}/api/v1`
 
-class Provinces extends RESTDataSource {
+class ProvinceApi extends RESTDataSource {
     constructor() {
         super()
-        // this.baseURL = `${baseURL}/province`,
-        this.baseURL = `http://localhost:${config.Port}/api/v1`
+        this.baseURL = baseURL
     }
 
     async provinces() {
-        const data = await this.get('/provinces')
-        return data
+        return this.get('/provinces')
     }
+
+    // async province({ provinceId }) {
+    //     const data = await this.get('/' + provinceId)
+    //     return data
+    // }
 }
 
-module.exports = Provinces;
+module.exports = { ProvinceApi };

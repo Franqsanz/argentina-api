@@ -1,4 +1,5 @@
 .env
 .prettierrc
 test
+graphql
 node_modules/

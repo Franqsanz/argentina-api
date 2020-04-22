@@ -3,9 +3,13 @@
 
 const resolvers = {
     Query: {
-        provinces: async (_, { dataSources }) => {
-            await dataSources.province.provinces();
+        provinces: async (parent, { provinces }, { dataSources }) => {
+            await dataSources.provinceApi.provinces({ provinces });
         }
+        // province: async (parent, args, { provinceId }, { dataSources }) => {
+        //     // const { _id } = args
+        //     dataSources.province.province({ provinceId });
+        // }
     }
 }
 

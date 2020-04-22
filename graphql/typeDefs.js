@@ -13,8 +13,18 @@ const typeDefs = gql`
         populations: String
         province: String
     }
+    type Province {
+        _id: ID
+        city: String
+        rank: Int
+        latitude: Int
+        longitude: Int
+        populations: String
+        province: String
+    }
+
     type Query {
-        ## province(id: ID!): Provinces
+        province(id: ID): Province
         provinces: [Provinces]
     }
 `;
