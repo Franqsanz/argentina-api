@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-disable node/no-unpublished-require */
 
 require('dotenv').config();
 const express = require('express');

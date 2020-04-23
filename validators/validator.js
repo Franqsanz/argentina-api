@@ -4,7 +4,7 @@
 
 const schema = require('./schema');
 
-const apiValidator = async (req, res, next) => {
+async function apiValidator(req, res, next) {
     try {
         await schema.validateAsync(req.body);
     } catch (error) {

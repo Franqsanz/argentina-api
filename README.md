@@ -2,7 +2,7 @@
 
 API Rest Full Node.js
 
-Correr la API en local: `npm start`
+Correr la API en local: `npm run dev`
 
 > Esta API contiene datos de provincias, su ciudad capital, poblacion y rango de Argentina.
 

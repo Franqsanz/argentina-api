@@ -3,7 +3,7 @@
 
 const provincesModel = require('../model/provinces');
 
-const getProvincesAll = async (req, res) => {
+async function getProvincesAll(req, res) {
     // citiesModel.find((err, cities) => {
     //     res.send({ cities: cities });
     // });
@@ -16,7 +16,7 @@ const getProvincesAll = async (req, res) => {
     }
 }
 
-const getFindOneProvinces = async (req, res) => {
+async function getFindOneProvinces(req, res) {
     // let cityId = req.params.cityId;
     // provincesModel.findById(cityId, (err, cities) => {
     //     res.send({ cities: cities });
@@ -35,7 +35,7 @@ const getFindOneProvinces = async (req, res) => {
     }
 }
 
-const putProvinces = async (req, res) => {
+async function putProvinces(req, res) {
     // let cityId = req.params.cityId;
     // let updated = req.body;
 
@@ -85,7 +85,7 @@ const putProvinces = async (req, res) => {
     }
 }
 
-const postProvinces = async (req, res) => {
+async function postProvinces(req, res) {
     // let newCity = new provincesModel({
     //     _id: req.body.id,
     //     city: req.body.city,
@@ -125,7 +125,7 @@ const postProvinces = async (req, res) => {
     }
 }
 
-const deleteProvinces = async (req, res) => {
+async function deleteProvinces(req, res) {
     // let cityId = req.params.cityId;
 
     // provincesModel.findById(cityId, (err, cityDelete) => {
