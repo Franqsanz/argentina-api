@@ -1,6 +1,5 @@
 'use strict';
 /* eslint-disable prettier/prettier */
-/* eslint-disable node/no-unpublished-require */
 
 const joi = require('@hapi/joi');
 

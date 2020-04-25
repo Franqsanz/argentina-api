@@ -25,18 +25,14 @@ app.use(
   })
 );
 app.use(compression());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
-app.use(
-  mongoSanitize({
-    replaceWith: '_'
-  })
-);
-// CORS
-app.use(cors());
+app.use(mongoSanitize({ replaceWith: '_' }));
 // Routes
 app.use('/api/v1', provinces);
+app.all('*', (req, res) => res.status(404).send('Page Not Found'));
 
 app.listen(config.Port, () =>
   console.log(`
