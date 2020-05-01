@@ -1,10 +1,10 @@
 # Provinces Argentina API
 
-API Rest Full Node.js
+API RestFul y GraphQL Node.js
 
 Correr la API en local: `npm run dev`
 
-> Esta API contiene datos de provincias, su ciudad capital, poblacion y rango de Argentina.
+> Esta API contiene datos de provincias, su ciudad capital, población, coordernadas y rango de Argentina.
 
 #### Tecnologias
 
