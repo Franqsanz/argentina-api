@@ -1,7 +1,7 @@
 {
   "name": "Province-Argentina-API",
   "version": "1.0.0",
-  "description": "Esta API contiene datos de provincias, sus ciudades y departamentos de Argentina. Aún en Desarrollo...",
+  "description": "Esta API contiene datos de provincias, su población, coordenadas y rango de Argentina. Aún en Desarrollo...",
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server.js",
