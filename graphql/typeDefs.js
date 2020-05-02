@@ -11,7 +11,7 @@ const typeDefs = gql`
         latitude: String
         longitude: String
         populations: String
-        province: String,
+        province: String
         foundation: Int
     }
 
@@ -22,7 +22,7 @@ const typeDefs = gql`
         latitude: String
         longitude: String
         populations: String
-        province: String,
+        province: String
         foundation: Int
     }
 
