@@ -27,7 +27,8 @@
     "helmet": "^3.21.2",
     "mongoose": "^5.7.12",
     "mongoose-sequence": "^5.2.2",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.4",

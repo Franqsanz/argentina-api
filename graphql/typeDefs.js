@@ -11,7 +11,8 @@ const typeDefs = gql`
         latitude: String
         longitude: String
         populations: String
-        province: String
+        province: String,
+        foundation: Int
     }
 
     type Province {
@@ -21,20 +22,13 @@ const typeDefs = gql`
         latitude: String
         longitude: String
         populations: String
-        province: String
+        province: String,
+        foundation: Int
     }
 
     type Query {
         province(id: ID): Province
         provinces: [Provinces]
-    }
-
-    type Mutation {
-        newProvinces (_id: Int capitalCity: String! rank: Int! latitude: String! longitude: String! populations: String! province: String!): Provinces!
-
-        updateProvinces (_id: ID capitalCity: String! rank: Int! latitude: String! longitude: String! populations: String! province: String!): Provinces!
-
-        deleteProvinces (_id: ID): Provinces!
     }
 `;
 
