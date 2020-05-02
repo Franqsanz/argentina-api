@@ -44,6 +44,12 @@ const schema = joi.object({
         .messages({
             'string.base': 'El Campo Province es Obligatorio.',
             'string.empty': 'El Campo Province no pude estar vacio.'
+        }),
+    foundation: joi.number()
+        .required()
+        .messages({
+            'string.base': 'El Campo foundation es Obligatorio.',
+            'string.empty': 'El Campo foundation no pude estar vacio.'
         })
 });
 

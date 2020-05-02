@@ -49,4 +49,8 @@ http://localhost:33528/api/v1/provinces/
 
 --- -->
 
+## Licencia
+
+[MIT](LICENSE)
+
 **Aún en Desarrollo...**

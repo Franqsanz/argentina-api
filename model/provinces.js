@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 // const autoIncrement = require('mongoose-sequence')(mongoose);
 
 const provincesArgentina = new Schema({
@@ -31,6 +31,10 @@ const provincesArgentina = new Schema({
         type: String,
         required: true
     },
+    foundation: {
+        type: Number,
+        required: true
+    }
 }, { versionKey: false });
 
 // cities.plugin(autoIncrement, { inc_field: ' id ' });
