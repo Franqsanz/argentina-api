@@ -34,6 +34,10 @@ const provincesArgentina = new Schema({
     foundation: {
         type: Number,
         required: true
+    },
+    founder: {
+        type: String,
+        required: true
     }
 }, { versionKey: false });
 

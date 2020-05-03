@@ -50,6 +50,13 @@ const schema = joi.object({
         .messages({
             'string.base': 'El Campo foundation es Obligatorio.',
             'string.empty': 'El Campo foundation no pude estar vacio.'
+        }),
+    founder: joi.string()
+        .trim()
+        .required()
+        .messages({
+            'string.base': 'El Campo founder es Obligatorio.',
+            'string.empty': 'El Campo founder no pude estar vacio.'
         })
 });
 

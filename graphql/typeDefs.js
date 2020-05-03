@@ -13,6 +13,7 @@ const typeDefs = gql`
         populations: String
         province: String
         foundation: Int
+        founder: String
     }
 
     type Province {
@@ -24,6 +25,7 @@ const typeDefs = gql`
         populations: String
         province: String
         foundation: Int
+        founder: String
     }
 
     type Query {
