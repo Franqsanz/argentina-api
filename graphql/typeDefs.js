@@ -8,8 +8,8 @@ const typeDefs = gql`
         _id: ID
         capitalCity: String
         rank: Int
-        latitude: String
-        longitude: String
+        latitude: Float
+        longitude: Float
         populations: String
         province: String
         foundation: Int
@@ -20,8 +20,8 @@ const typeDefs = gql`
         _id: ID
         capitalCity: String
         rank: Int
-        latitude: String
-        longitude: String
+        latitude: Float
+        longitude: Float
         populations: String
         province: String
         foundation: Int
@@ -29,7 +29,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        province(id: ID): Province
+        province(id: ID!): Province
         provinces: [Provinces]
     }
 `;
