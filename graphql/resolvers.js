@@ -2,9 +2,9 @@
 /* eslint-disable prettier/prettier */
 
 const fetch = require('node-fetch');
-const config = require('../config/config');
+const { Port } = require('../config/config');
 
-let baseURL = `http://localhost:${config.Port}/api/v1/provinces`
+let baseURL = `http://localhost:${Port}/api/v1/provinces`
 
 const resolvers = {
     Query: {

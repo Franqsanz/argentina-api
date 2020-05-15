@@ -8,18 +8,10 @@ const server = require('../server');
 
 chai.use(chaiHttp);
 
-async function test() {
-    chai.request(server).get(`/api/v1/provinces`);
-}
-
-async function expectStructure(body) {
-    expect(body).to.be.an('Array');
-}
+let URL = `/api/v1/provinces`;
 
 describe('provinces', () => {
     it('GET all the provinces', async () => {
-        const { body } = await test()
-        expectStructure(body);
         // expect(body).to.have.length(11)
     });
 });

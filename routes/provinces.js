@@ -2,9 +2,14 @@
 /* eslint-disable prettier/prettier */
 
 const router = require('express').Router();
-const routesProv = require('../controllers/routesCtrl');
+const {
+    getHome,
+    getProvincesAll,
+    getFindOneProvinces
+} = require('../controllers/routesCtrl');
 
-router.get('/provinces', routesProv.getProvincesAll);
-router.get('/provinces/:provinceId', routesProv.getFindOneProvinces);
+router.get('/', getHome)
+router.get('/provinces', getProvincesAll);
+router.get('/provinces/:provinceId', getFindOneProvinces);
 
 module.exports = router

@@ -3,9 +3,8 @@
 
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-// const autoIncrement = require('mongoose-sequence')(mongoose);
 
-const provincesArgentina = new Schema({
+const provinces = new Schema({
     _id: Number,
     capitalCity: {
         type: String,
@@ -41,5 +40,4 @@ const provincesArgentina = new Schema({
     }
 }, { versionKey: false });
 
-// cities.plugin(autoIncrement, { inc_field: ' id ' });
-module.exports = mongoose.model('provincesArgentina', provincesArgentina);
+module.exports = mongoose.model('provinces', provinces);

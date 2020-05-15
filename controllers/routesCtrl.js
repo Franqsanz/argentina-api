@@ -1,15 +1,18 @@
 'use strict';
 /* eslint-disable prettier/prettier */
 
+const { Port } = require('../config/config');
 const provincesModel = require('../model/provinces');
 
-async function getProvincesAll(req, res) {
-    // citiesModel.find((err, cities) => {
-    //     res.send({ cities: cities });
-    // });
+async function getHome(req, res) {
+    res.send({
+        "provinces": `http://localhost:${Port}/api/v1/provinces`
+    });
+}
 
+async function getProvincesAll(req, res) {
     try {
-        const provinces = await provincesModel.find();
+        const provinces = await provincesModel.find().sort({ _id: 1 });
         return res.status(200).send(provinces);
     } catch (error) {
         return res.status(500).send({ 'error': error });
@@ -17,11 +20,6 @@ async function getProvincesAll(req, res) {
 }
 
 async function getFindOneProvinces(req, res) {
-    // let cityId = req.params.cityId;
-    // provincesModel.findById(cityId, (err, cities) => {
-    //     res.send({ cities: cities });
-    // });
-
     try {
         let _id = req.params.provinceId;
         const province = await provincesModel.findById({ _id });
@@ -36,6 +34,7 @@ async function getFindOneProvinces(req, res) {
 }
 
 module.exports = {
+    getHome,
     getProvincesAll,
     getFindOneProvinces
 };

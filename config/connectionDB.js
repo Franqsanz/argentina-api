@@ -1,18 +1,18 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const config = require('./config');
+const { db } = require('./config');
 
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true
 };
 
-mongoose.connect(config.db, options);
+mongoose.connect(db, options);
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
 
-const db = mongoose.connection;
+const connect = mongoose.connection;
 
-db.on('error', err => console.error(`→ ${err.message}`));
-db.once('open', () => console.log('DB Connection'));
+connect.on('error', err => console.error(`→ ${err.message}`));
+connect.once('open', () => console.log('DB Connection'));
