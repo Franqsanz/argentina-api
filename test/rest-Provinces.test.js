@@ -8,17 +8,29 @@ const server = require('../server');
 
 chai.use(chaiHttp);
 
-let URL = `/api/v1/provinces`;
+let URL = '/api/v1/provinces'
 
-describe('provinces', () => {
-    it('GET all the provinces', async () => {
-        // expect(body).to.have.length(11)
+describe('/GET provinces', () => {
+    it('GET all the provinces', (done) => {
+        chai.request(server)
+            .get(URL)
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.body).to.an('array');
+                expect(res.body).to.have.lengthOf(24);
+                done();
+            });
     });
 });
-describe('GET province id', () => {
-    it('GET one the province id', async () => {
-        const body = await test()
-        // expect(body).to.be.an('object')
-        // expect(body._id).to.equal(1);
+describe('/GET province id', () => {
+    it('GET one the province id', (done) => {
+        chai.request(server)
+            .get(`${URL}/1`)
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.body).to.have.property('_id').to.be.equal(1);
+                expect(res.body).to.be.an('object');
+                done()
+            });
     });
 });
