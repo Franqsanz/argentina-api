@@ -1,3 +1,5 @@
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # Provinces Argentina API
 
 API RESTful y GraphQL Node.js
@@ -6,9 +8,35 @@ API RESTful y GraphQL Node.js
 
 ### Comandos
 
-Instala todas las dependecias: `npm install` o `yarn install`.
-Correr la API en local: `npm run dev` o `yarn dev`.
-Importa los datos con: `npm run data` o `yarn data`.
+Instala todas las dependecias:
+
+```sh
+npm install
+```
+
+```sh
+yarn install
+```
+
+Correr la API en local:
+
+```sh
+npm run dev
+```
+
+```sh
+yarn dev
+```
+
+Importa los datos con:
+
+```sh
+npm run data
+```
+
+```sh
+yarn data
+```
 
 ## Introducción
 
@@ -112,7 +140,7 @@ query {
     foundation
     founder
   }
-  province(id: "5") {
+  province(id: 5) {
     _id
     capitalCity
     province
@@ -121,11 +149,11 @@ query {
 }
 ```
 
-> ¿Qué es [GraphQL](https://grapql.org/)?
+> ¿Qué es [GraphQL](https://graphql.org/)?
 
 ---
 
-- Puedes encontrar esta misma documentación en el [Sitio Web](https://provincesargentinaapi.netlify.app/#documentacion).
+<!-- - Puedes encontrar esta misma documentación en el [Sitio Web](https://provincesargentinaapi.netlify.app/#documentacion). -->
 
 ## Licencia
 
