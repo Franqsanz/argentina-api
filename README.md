@@ -1,4 +1,7 @@
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![API REST](https://img.shields.io/badge/API-REST-yellow.svg)]()
+[![API GraphQL](https://img.shields.io/badge/API-GraphQL-ff69b4.svg)]()
+[![Last Commit](https://img.shields.io/github/last-commit/Franqsanz/provinces-argentina-api)]()
 
 # Provinces Argentina API
 
