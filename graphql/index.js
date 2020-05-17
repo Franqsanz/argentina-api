@@ -6,7 +6,8 @@ const resolvers = require('./resolvers');
 const typeDefs = require('./typeDefs');
 
 const server = new ApolloServer({
-    typeDefs, resolvers,
+    typeDefs,
+    resolvers,
     playground: true,
     introspection: true
 });

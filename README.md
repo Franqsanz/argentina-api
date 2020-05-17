@@ -8,34 +8,31 @@ API RESTful y GraphQL Node.js
 
 ### Comandos
 
-Instala todas las dependecias:
+Instala todas las dependecias
 
 ```sh
-npm install
+$ npm install
+
+$ yarn install
 ```
 
+Ejecutar la API en local
+
 ```sh
-yarn install
+$ npm run dev
+
+$ yarn dev
 ```
 
-Correr la API en local:
+
+Importar los datos
+<!-- _Asegúrate de tener instalado MongoDB._ -->
+> Asegúrate de tener instalado MongoDB.
 
 ```sh
-npm run dev
-```
+$ npm run data
 
-```sh
-yarn dev
-```
-
-Importa los datos con:
-
-```sh
-npm run data
-```
-
-```sh
-yarn data
+$ yarn data
 ```
 
 ## Introducción
@@ -44,7 +41,7 @@ Esta documentación lo ayudará a familiarizarse con los recursos de la API de P
 
 ### REST
 
-La url base contiene información sobre todos los recursos de API disponible. Todas las solicitides son `GET`. Todas las respuestas devolverán datos en `json`.
+La URL base contiene información sobre todos los recursos de API disponible. Todas las solicitides son `GET`. Todas las respuestas devolverán datos en `json`.
 
 ```
 http://localhost:33528/api/v1/
