@@ -6,7 +6,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type Provinces {
         _id: ID
-        capitalCity: String
+        capital: String
         rank: Int
         latitude: Float
         longitude: Float
@@ -18,7 +18,7 @@ const typeDefs = gql`
 
     type Province {
         _id: ID
-        capitalCity: String
+        capital: String
         rank: Int
         latitude: Float
         longitude: Float

@@ -23,6 +23,7 @@ async function getFindOneProvinces(req, res) {
     try {
         let _id = req.params.provinceId;
         const province = await provincesModel.findById({ _id });
+
         if (!province) {
             return res.status(404).send('Is province does not exist');
         } else {

@@ -6,12 +6,12 @@ const joi = require('@hapi/joi');
 const schema = joi.object({
     id: joi.number()
         .required(),
-    city: joi.string()
+    capital: joi.string()
         .trim()
         .required()
         .messages({
-            'string.base': 'El Campo City es Obligatorio.',
-            'string.empty': 'El Campo City no pude estar vacio.'
+            'string.base': 'El Campo capital es Obligatorio.',
+            'string.empty': 'El Campo capital no pude estar vacio.'
         }),
     rank: joi.number()
         .required()

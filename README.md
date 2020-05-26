@@ -1,13 +1,19 @@
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![API REST](https://img.shields.io/badge/API-REST-yellow.svg)]()
-[![API GraphQL](https://img.shields.io/badge/API-GraphQL-ff69b4.svg)]()
-[![Last Commit](https://img.shields.io/github/last-commit/Franqsanz/provinces-argentina-api)]()
+[![API GraphQL](https://img.shields.io/badge/API-GraphQL-ff69b4.svg)](https://graphql.org/)
+[![Last Commit](https://img.shields.io/github/last-commit/Franqsanz/provinces-argentina-api)](https://github.com/Franqsanz/provinces-argentina-api/)
 
 # Provinces Argentina API
 
 API RESTful y GraphQL Node.js
 
 > Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Año de fundación, Fundador y Rango.
+
+### Clonar el repositorio
+
+```sh
+$ git clone https://github.com/Franqsanz/provinces-argentina-api.git
+```
 
 ### Comandos
 
@@ -16,6 +22,7 @@ Instala todas las dependecias
 ```sh
 $ npm install
 
+# o con yarn
 $ yarn install
 ```
 
@@ -27,9 +34,10 @@ $ npm run dev
 $ yarn dev
 ```
 
-
 Importar los datos
+
 <!-- _Asegúrate de tener instalado MongoDB._ -->
+
 > Asegúrate de tener instalado MongoDB.
 
 ```sh
@@ -78,7 +86,7 @@ http://localhost:33528/api/v1/provinces/
 [
   {
     "_id": 1,
-    "capitalCity": "La Plata",
+    "capital": "La Plata",
     "rank": 1,
     "latitude": -31.4217247,
     "longitude": -64.1858136,
@@ -89,7 +97,7 @@ http://localhost:33528/api/v1/provinces/
   },
   {
     "_id": 2,
-    "capitalCity": "Córdoba",
+    "capital": "Córdoba",
     "rank": 2,
     "latitude": -31.4217247,
     "longitude": -64.1858136,
@@ -116,7 +124,7 @@ http://localhost:33528/api/v1/provinces/2
 [
   {
     "_id": 2,
-    "capitalCity": "Córdoba",
+    "capital": "Córdoba",
     "rank": 2,
     "latitude": -31.4217247,
     "longitude": -64.1858136,
@@ -142,14 +150,14 @@ query {
   }
   province(id: 5) {
     _id
-    capitalCity
+    capital
     province
     founder
   }
 }
 ```
 
-> ¿Qué es [GraphQL](https://graphql.org/)?
+> ¿Qué es [GraphQL](https://graphql.org/learn/)?
 
 ---
 
