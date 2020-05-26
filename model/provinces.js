@@ -4,6 +4,10 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+const options = {
+    versionKey: false
+}
+
 const provinces = new Schema({
     _id: Number,
     capital: {
@@ -38,6 +42,6 @@ const provinces = new Schema({
         type: String,
         required: true
     }
-}, { versionKey: false });
+}, options);
 
 module.exports = mongoose.model('provinces', provinces);
