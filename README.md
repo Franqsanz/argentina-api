@@ -88,8 +88,8 @@ http://localhost:33528/api/v1/provinces/
     "_id": 1,
     "capital": "La Plata",
     "rank": 1,
-    "latitude": -31.4217247,
-    "longitude": -64.1858136,
+    "latitude": -34.92088,
+    "longitude": -57.949651,
     "populations": "15771581",
     "province": "Buenos Aires",
     "foundation": 1882,
@@ -132,6 +132,36 @@ http://localhost:33528/api/v1/provinces/2
     "province": "Córdoba",
     "foundation": 1573,
     "founder": "Jerónimo Luis de Cabrera"
+  }
+]
+```
+
+### Filtrado de provincias
+
+También puede incluir filtros en la URL incluyendo parámetros de consulta adicionales. Para iniciar el filtrado agregue un `?` seguido por la consulta `<Query>=<valor>`. Por ejemplo si desea verificar cuantas capitales contienen la letra `Y`, simplemente agregue `?capital=y`.
+
+Parámetros disponibles:
+
+- `capital`: filtrado por capital.
+
+_Sample request_
+
+```
+http://localhost:33528/api/v1/provinces?capital=y
+```
+
+```json
+[
+  {
+    "_id": 13,
+    "capital": "San Salvador de Jujuy",
+    "rank": 13,
+    "latitude": -24.186427,
+    "longitude": -65.299451,
+    "populations": "685870",
+    "province": "Jujuy",
+    "foundation": 1593,
+    "founder": "Francisco de Argañaráz"
   }
 ]
 ```

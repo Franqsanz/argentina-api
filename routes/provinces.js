@@ -2,6 +2,7 @@
 /* eslint-disable prettier/prettier */
 
 const router = require('express').Router();
+const handleQuery = require('../controllers/handleQuery');
 const {
     getHome,
     getProvincesAll,
@@ -9,7 +10,7 @@ const {
 } = require('../controllers/routesCtrl');
 
 router.get('/', getHome)
-router.get('/provinces', getProvincesAll);
+router.get('/provinces', handleQuery, getProvincesAll);
 router.get('/provinces/:provinceId', getFindOneProvinces);
 
 module.exports = router
