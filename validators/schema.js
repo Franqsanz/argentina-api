@@ -10,53 +10,81 @@ const schema = joi.object({
         .trim()
         .required()
         .messages({
-            'string.base': 'El Campo capital es Obligatorio.',
-            'string.empty': 'El Campo capital no pude estar vacio.'
+            'string.base': 'Capital debe ser de tipo String.',
+            'string.empty': 'El campo capital no pude estar vacio.',
+            'any.required': 'El campo capital es Obligatorio.'
         }),
     rank: joi.number()
         .required()
         .messages({
-            'number.base': 'El Campo Rank es Obligatorio y debe ser un Numero.',
-            'string.empty': 'El Campo Rank no pude estar vacio.'
+            'number.base': 'Rank debe ser de tipo Number',
+            'number.empty': 'El campo Rank no pude estar vacio.',
+            'any.required': 'El campo Rank es Obligatorio.'
         }),
     latitude: joi.number()
+        .min(11)
+        .max(11)
         .required()
         .messages({
-            'number.base': 'El Campo Latitude es Obligatorio y debe ser un Numero.',
-            'string.empty': 'El Campo Latitude no pude estar vacio.'
+            'number.base': 'Latitude debe ser de tipo Number.',
+            'number.empty': 'El campo Latitude no pude estar vacio.',
+            'number.min': 'El minimo de numeros que debe tener este campo es de 11 caracteres.',
+            'number.max': 'El maximo de numeros que debe tener este campo es de 11 caracteres.',
+            'any.required': 'El campo Latitude es Obligatorio.'
         }),
     longitude: joi.number()
+        .min(11)
+        .max(11)
         .required()
         .messages({
-            'number.base': 'El Campo Longitude es Obligatorio y debe ser un Numero.',
-            'string.empty': 'El Campo Longitude no pude estar vacio.'
+            'number.base': 'Longitude debe ser de tipo Number.',
+            'number.empty': 'El campo Longitude no pude estar vacio.',
+            'number.min': 'El minimo de numeros que debe tener este campo es de 11 caracteres.',
+            'number.max': 'El maximo de numeros que debe tener este campo es de 11 caracteres.',
+            'any.required': 'El campo Longitude es Obligatorio.'
         }),
     populations: joi.string()
         .trim()
         .required()
         .messages({
-            'string.base': 'El Campo Populations es Obligatorio.',
-            'string.empty': 'El Campo Populations no pude estar vacio.'
+            'string.base': 'Populations debe ser de tipo String.',
+            'string.empty': 'El campo Populations no pude estar vacio.',
+            'any.required': 'El campo Populations es Obligatorio.'
         }),
     province: joi.string()
         .trim()
         .required()
         .messages({
-            'string.base': 'El Campo Province es Obligatorio.',
-            'string.empty': 'El Campo Province no pude estar vacio.'
+            'string.base': 'Province debe ser de tipo String.',
+            'string.empty': 'El campo Province no pude estar vacio.',
+            'any.required': 'El campo Province es Obligatorio.'
         }),
     foundation: joi.number()
+        .min(4)
+        .max(4)
         .required()
         .messages({
-            'string.base': 'El Campo foundation es Obligatorio.',
-            'string.empty': 'El Campo foundation no pude estar vacio.'
+            'number.base': 'Foundation debe ser de tipo Number.',
+            'number.empty': 'El campo Foundation no pude estar vacio.',
+            'number.min': 'El minimo de numeros que debe tener este campo es de 4 caracteres.',
+            'number.max': 'El maximo de numeros que debe tener este campo es de 4 caracteres.',
+            'any.required': 'El campo Foundation es Obligatorio.'
         }),
     founder: joi.string()
         .trim()
         .required()
         .messages({
-            'string.base': 'El Campo founder es Obligatorio.',
-            'string.empty': 'El Campo founder no pude estar vacio.'
+            'string.base': 'Founder debe ser de tipo String.',
+            'string.empty': 'El campo Founder no pude estar vacio.',
+            'any.required': 'El campo Founder es Obligatorio.'
+        }),
+    geographic_region: joi.string()
+        .trim()
+        .required()
+        .messages({
+            'string.base': 'Geographic region debe ser de tipo String.',
+            'string.empty': 'El campo Geographic region no pude estar vacio.',
+            'any.required': 'El campo Geographic region es Obligatorio.'
         })
 });
 

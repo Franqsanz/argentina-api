@@ -14,6 +14,7 @@ const typeDefs = gql`
     province: String
     foundation: Int
     founder: String
+    geographic_region: String
   }
 
   type Province {
@@ -26,15 +27,17 @@ const typeDefs = gql`
     province: String
     foundation: Int
     founder: String
+    geographic_region: String
   }
 
-  input filterProvinces {
-    capital: String
-  }
+#   input filterProvinces {
+#     capital: String
+#   }
 
   type Query {
     province(id: ID!): Province
-    provinces(filter: filterProvinces): [Provinces]
+    # provinces(filter: filterProvinces): [Provinces]
+    provinces: [Provinces]
   }
 `;
 
