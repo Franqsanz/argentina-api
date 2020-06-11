@@ -7,7 +7,9 @@
 
 API RESTful y GraphQL Node.js
 
-> Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Año de fundación, Fundador y Rango.
+> Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Año de fundación, Fundador, Rango y Region Geografica.
+
+- **Si encuentras algún error o crees que algo esta mal, no dudes en escribir un [inssue](https://github.com/Franqsanz/provinces-argentina-api/issues). 😊**
 
 ### Clonar el repositorio
 
@@ -35,8 +37,6 @@ $ yarn dev
 ```
 
 Importar los datos
-
-<!-- _Asegúrate de tener instalado MongoDB._ -->
 
 > Asegúrate de tener instalado MongoDB.
 
@@ -93,7 +93,8 @@ http://localhost:33528/api/v1/provinces/
     "populations": "15771581",
     "province": "Buenos Aires",
     "foundation": 1882,
-    "founder": "Dardo Rocha"
+    "founder": "Dardo Rocha",
+    "geographic_region": "Pampa Húmeda y Seca"
   },
   {
     "_id": 2,
@@ -104,34 +105,36 @@ http://localhost:33528/api/v1/provinces/
     "populations": "3384649",
     "province": "Córdoba",
     "foundation": 1573,
-    "founder": "Jerónimo Luis de Cabrera"
+    "founder": "Jerónimo Luis de Cabrera",
+    "geographic_region": "Pampa Húmeda, Sierras Pampeanas y Chaqueña"
   }
   // ...
-];
+]
 ```
 
 ### Consigue una sola provincia
 
-Puede obtener una sola provincia agregando el `id` como parametro: `/provinces/2`.
+Puede obtener una sola provincia agregando el `id` como parametro: `/provinces/20`.
 
 _Sample request_
 
 ```
-http://localhost:33528/api/v1/provinces/2
+http://localhost:33528/api/v1/provinces/20
 ```
 
 ```json
 [
   {
-    "_id": 2,
-    "capital": "Córdoba",
-    "rank": 2,
-    "latitude": -31.4217247,
-    "longitude": -64.1858136,
-    "populations": "3384649",
-    "province": "Córdoba",
-    "foundation": 1573,
-    "founder": "Jerónimo Luis de Cabrera"
+    "_id": 20,
+    "capital": "La Rioja",
+    "rank": 20,
+    "latitude": -29.414796,
+    "longitude": -66.860263,
+    "populations": "343765",
+    "province": "La Rioja",
+    "foundation": 1591,
+    "founder": "Juan Ramírez de Velazco",
+    "geographic_region": "Cuyo y Sierras Pampeanas"
   }
 ]
 ```
@@ -161,7 +164,8 @@ http://localhost:33528/api/v1/provinces?capital=y
     "populations": "685870",
     "province": "Jujuy",
     "foundation": 1593,
-    "founder": "Francisco de Argañaráz"
+    "founder": "Francisco de Argañaráz",
+    "geographic_region": "NOA"
   }
 ]
 ```

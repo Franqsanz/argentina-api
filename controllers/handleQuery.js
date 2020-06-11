@@ -3,12 +3,8 @@
 
 const provincesModel = require('../model/provinces');
 
-function replaceAccents(chain) {
-    const chars = { "á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u", "ñ": "n" }
-
-    const expr = /[áéíóúñ]/ig;
-    const res = chain.replace(expr, (e) => chars[e]);
-    return res
+function rmAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 }
 
 async function query(req, res, next) {
@@ -16,9 +12,7 @@ async function query(req, res, next) {
 
     if (capital) {
         for (const key in capital) {
-            // console.log(capital[key])
-            const regex = new RegExp(replaceAccents(capital[key]), 'gi');
-            // const regex = new RegExp(capital[key], 'gi');
+            const regex = new RegExp(rmAccents(capital[key]), 'gi');
 
             const query = await provincesModel.find({ capital: regex });
 
