@@ -59,6 +59,14 @@ const schema = joi.object({
             'string.empty': 'El campo Province no pude estar vacio.',
             'any.required': 'El campo Province es Obligatorio.'
         }),
+    surface: joi.string()
+        .trim()
+        .required()
+        .messages({
+            'string.base': 'Surface debe ser de tipo String.',
+            'string.empty': 'El campo surface no pude estar vacio.',
+            'any.required': 'El campo surface es Obligatorio.'
+        }),
     foundation: joi.number()
         .min(4)
         .max(4)

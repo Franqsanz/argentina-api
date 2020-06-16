@@ -20,14 +20,14 @@ const provinces = new Schema({
     },
     latitude: {
         type: Number,
-        max: 11,
         min: 11,
+        max: 11,
         required: true
     },
     longitude: {
         type: Number,
-        max: 11,
         min: 11,
+        max: 11,
         required: true
     },
     populations: {
@@ -38,14 +38,18 @@ const provinces = new Schema({
         type: String,
         required: true
     },
+    surface: {
+        type: String,
+        required: true
+    },
     foundation: {
         type: Number,
         required: true
     },
     founder: {
         type: String,
-        max: 4,
         min: 4,
+        max: 4,
         required: true
     },
     geographic_region: {

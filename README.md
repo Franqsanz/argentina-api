@@ -68,6 +68,22 @@ Actualmente hay un recurso disponible.
 
 - **Provincias**: se usa para obtener todas las provincias.
 
+### Esquema de provincias
+
+| Key               | Type   |
+| ----------------- | ------ |
+| \_id              | Number |
+| capital           | String |
+| rank              | Number |
+| latitude          | Number |
+| longitude         | Number |
+| populations       | String |
+| province          | String |
+| surface           | String |
+| foundation        | Number |
+| founder           | String |
+| geographic_region | String |
+
 ### Provincias
 
 Hay un total de `23` provincias ordenadas por `id`.
@@ -92,9 +108,10 @@ http://localhost:33528/api/v1/provinces/
     "longitude": -57.949651,
     "populations": "15771581",
     "province": "Buenos Aires",
+    "surface": "307571",
     "foundation": 1882,
     "founder": "Dardo Rocha",
-    "geographic_region": "Pampa Húmeda y Seca"
+    "geographic_region": "Pampa Húmeda y Pampa Seca"
   },
   {
     "_id": 2,
@@ -104,6 +121,7 @@ http://localhost:33528/api/v1/provinces/
     "longitude": -64.1858136,
     "populations": "3384649",
     "province": "Córdoba",
+    "surface": "165321",
     "foundation": 1573,
     "founder": "Jerónimo Luis de Cabrera",
     "geographic_region": "Pampa Húmeda, Sierras Pampeanas y Chaqueña"
@@ -132,6 +150,7 @@ http://localhost:33528/api/v1/provinces/20
     "longitude": -66.860263,
     "populations": "343765",
     "province": "La Rioja",
+    "surface": "89680",
     "foundation": 1591,
     "founder": "Juan Ramírez de Velazco",
     "geographic_region": "Cuyo y Sierras Pampeanas"
@@ -163,6 +182,7 @@ http://localhost:33528/api/v1/provinces?capital=y
     "longitude": -65.299451,
     "populations": "685870",
     "province": "Jujuy",
+    "surface": "53219",
     "foundation": 1593,
     "founder": "Francisco de Argañaráz",
     "geographic_region": "NOA"

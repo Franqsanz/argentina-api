@@ -12,6 +12,7 @@ const typeDefs = gql`
     longitude: Float
     populations: String
     province: String
+    surface: String
     foundation: Int
     founder: String
     geographic_region: String
@@ -25,6 +26,7 @@ const typeDefs = gql`
     longitude: Float
     populations: String
     province: String
+    surface: String
     foundation: Int
     founder: String
     geographic_region: String
