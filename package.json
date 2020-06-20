@@ -1,7 +1,7 @@
 {
-  "name": "Province-Argentina-API",
+  "name": "Argentina-API",
   "version": "1.0.0",
-  "description": "Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Año de fundación, Fundador y Rango.",
+  "description": "Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Superficie Km², Año de fundación, Fundador, Rango y Región Geográfica.",
   "main": "server.js",
   "engines": {
     "node": ">=12.13.1"
@@ -52,11 +52,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Franqsanz/provinces-argentina-api.git"
+    "url": "git+https://github.com/Franqsanz/argentina-api.git"
   },
-  "homepage": "https://github.com/Franqsanz/provinces-argentina-api#readme",
+  "homepage": "https://github.com/Franqsanz/argentina-api#readme",
   "bugs": {
-    "url": "https://github.com/Franqsanz/provinces-argentina-api/issues"
+    "url": "https://github.com/Franqsanz/argentina-api/issues"
   },
   "keywords": [
     "api",
@@ -64,7 +64,7 @@
     "api-restful",
     "graphql",
     "api-graphql",
-    "provinces-argentina-api",
+    "argentina-api",
     "argentina"
   ]
 }
