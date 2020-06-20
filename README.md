@@ -9,7 +9,7 @@ API RESTful y GraphQL Node.js
 
 > Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Superficie Km², Año de fundación, Fundador, Rango y Región Geográfica.
 
-- **Si encuentras algún error o crees que algo esta mal, no dudes en escribir un [inssue](https://github.com/Franqsanz/provinces-argentina-api/issues). 😊**
+- **Si encuentras algún error o crees que algo esta mal, no dudes en escribir un [inssue](https://github.com/Franqsanz/argentina-api/issues). 😊**
 
 ### Clonar el repositorio
 
