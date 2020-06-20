@@ -22,25 +22,17 @@ const schema = joi.object({
             'any.required': 'El campo Rank es Obligatorio.'
         }),
     latitude: joi.number()
-        .min(11)
-        .max(11)
         .required()
         .messages({
             'number.base': 'Latitude debe ser de tipo Number.',
             'number.empty': 'El campo Latitude no pude estar vacio.',
-            'number.min': 'El minimo de numeros que debe tener este campo es de 11 caracteres.',
-            'number.max': 'El maximo de numeros que debe tener este campo es de 11 caracteres.',
             'any.required': 'El campo Latitude es Obligatorio.'
         }),
     longitude: joi.number()
-        .min(11)
-        .max(11)
         .required()
         .messages({
             'number.base': 'Longitude debe ser de tipo Number.',
             'number.empty': 'El campo Longitude no pude estar vacio.',
-            'number.min': 'El minimo de numeros que debe tener este campo es de 11 caracteres.',
-            'number.max': 'El maximo de numeros que debe tener este campo es de 11 caracteres.',
             'any.required': 'El campo Longitude es Obligatorio.'
         }),
     populations: joi.string()
@@ -68,14 +60,10 @@ const schema = joi.object({
             'any.required': 'El campo surface es Obligatorio.'
         }),
     foundation: joi.number()
-        .min(4)
-        .max(4)
         .required()
         .messages({
             'number.base': 'Foundation debe ser de tipo Number.',
             'number.empty': 'El campo Foundation no pude estar vacio.',
-            'number.min': 'El minimo de numeros que debe tener este campo es de 4 caracteres.',
-            'number.max': 'El maximo de numeros que debe tener este campo es de 4 caracteres.',
             'any.required': 'El campo Foundation es Obligatorio.'
         }),
     founder: joi.string()
