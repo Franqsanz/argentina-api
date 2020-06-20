@@ -1,9 +1,9 @@
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![API REST](https://img.shields.io/badge/API-REST-yellow.svg)]()
 [![API GraphQL](https://img.shields.io/badge/API-GraphQL-ff69b4.svg)](https://graphql.org/)
-[![Last Commit](https://img.shields.io/github/last-commit/Franqsanz/provinces-argentina-api)](https://github.com/Franqsanz/provinces-argentina-api/)
+[![Last Commit](https://img.shields.io/github/last-commit/Franqsanz/argentina-api)](https://github.com/Franqsanz/argentina-api/)
 
-# Provinces Argentina API
+# Argentina API
 
 API RESTful y GraphQL Node.js
 
@@ -14,7 +14,7 @@ API RESTful y GraphQL Node.js
 ### Clonar el repositorio
 
 ```sh
-$ git clone https://github.com/Franqsanz/provinces-argentina-api.git
+$ git clone https://github.com/Franqsanz/argentina-api.git
 ```
 
 ### Comandos
@@ -48,11 +48,11 @@ $ yarn data
 
 ## Introducción
 
-Esta documentación lo ayudará a familiarizarse con los recursos de la API de Provincias Argentina y le mostrará cómo hacer diferentes consultas.
+Esta documentación lo ayudará a familiarizarse con los recursos de Argentina API y le mostrará cómo hacer diferentes consultas.
 
 ### REST
 
-La URL base contiene información sobre todos los recursos de API disponible. Todas las solicitides son `GET`. Todas las respuestas devolverán datos en `json`.
+La URL base contiene información sobre todos los recursos de API disponible. Todas las solicitudes son `GET`. Todas las respuestas devolverán datos en `json`.
 
 ```
 http://localhost:33528/api/v1/
@@ -86,7 +86,7 @@ Actualmente hay un recurso disponible.
 
 ### Provincias
 
-Hay un total de `23` provincias ordenadas por `id`.
+Hay un total de `23` provincias y la ciudad autónoma de buenos aires, ordenadas por `id`.
 
 ### Consigue todas las provincias
 

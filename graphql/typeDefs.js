@@ -32,13 +32,8 @@ const typeDefs = gql`
     geographic_region: String
   }
 
-#   input filterProvinces {
-#     capital: String
-#   }
-
   type Query {
     province(id: ID!): Province
-    # provinces(filter: filterProvinces): [Provinces]
     provinces: [Provinces]
   }
 `;

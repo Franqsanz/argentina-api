@@ -9,7 +9,7 @@
   "scripts": {
     "start": "NODE_ENV=production node server.js",
     "dev": "nodemon server.js",
-    "data": "mongorestore --host=localhost:27017 --db=provincesargentina --drop ./data/provincesargentina",
+    "data": "mongorestore --host=localhost:27017 --db=argentinaapi --drop ./data/argentinaapi",
     "test": "nyc mocha --timeout 10000",
     "lint": "eslint ./"
   },
