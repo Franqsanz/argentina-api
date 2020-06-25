@@ -70,19 +70,21 @@ Actualmente hay un recurso disponible.
 
 ### Esquema de provincias
 
-| Key               | Type   |
-| ----------------- | ------ |
-| \_id              | Number |
-| capital           | String |
-| rank              | Number |
-| latitude          | Number |
-| longitude         | Number |
-| populations       | String |
-| province          | String |
-| surface           | String |
-| foundation        | Number |
-| founder           | String |
-| geographic_region | String |
+❗ **Todos los campos son requeridos**. ❗
+
+| Key               | Type   | Description                       |
+| ----------------- | ------ | --------------------------------- |
+| \_id              | Number | ID de la provincia                |
+| capital           | String | Nombre de la capital              |
+| rank              | Number | Rango de la provincia             |
+| latitude          | Number | Latitud de la provincia           |
+| longitude         | Number | Longitud de la provincia          |
+| populations       | String | Población total de la provincia   |
+| province          | String | Nombre de la provincia            |
+| surface           | String | Superficie Km² de la provincia    |
+| foundation        | Number | Año de fundación de la provincia  |
+| founder           | String | Fundador de la provincia          |
+| geographic_region | String | Región geográfica de la provincia |
 
 ### Provincias
 
