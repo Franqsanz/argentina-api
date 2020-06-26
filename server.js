@@ -32,6 +32,9 @@ app.use(morgan('dev'));
 app.use(mongoSanitize({ replaceWith: '_' }));
 // Routes
 app.use('/api/v1', provinces);
+app.use((error, req, res, next) => {
+  res.status(500).send({ error: error });
+});
 
 // GraphQL
 server.applyMiddleware({ app });
