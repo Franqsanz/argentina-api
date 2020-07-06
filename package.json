@@ -11,7 +11,7 @@
     "dev": "nodemon server.js",
     "data": "mongorestore --host=localhost:27017 --db=argentinaapi --drop ./data/argentinaapi",
     "test": "nyc mocha --timeout 10000",
-    "lint": "eslint ./"
+    "lint": "eslint --fix ./ && echo 'Lint complete'"
   },
   "author": "Franco Andrés Sánchez",
   "license": "MIT",
@@ -25,11 +25,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-mongo-sanitize": "^1.3.2",
-    "express-rate-limit": "^5.0.0",
-    "express-simple-pagination": "^1.0.2",
     "helmet": "^3.21.2",
     "mongoose": "^5.7.12",
-    "mongoose-sequence": "^5.2.2",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0"
   },

@@ -1,5 +1,6 @@
 {
   "env": {
+    "browser": true,
     "commonjs": true,
     "es6": true,
     "node": true
@@ -9,6 +10,7 @@
     "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
+    "sourceType": "module",
     "ecmaVersion": 2018
   },
   "extends": [
@@ -27,6 +29,5 @@
     "no-undef": "off",
     "func-names": "off",
     "node/no-unpublished-require": "off"
-    // "node/no-unsupported-features/es-syntax": "off"
   }
 }

@@ -1,4 +1,6 @@
 .prettierrc
+.eslintignore
+.prettierignore
 node_modules
 .env
 .nyc_output
