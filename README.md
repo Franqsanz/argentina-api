@@ -7,6 +7,8 @@
 
 API RESTful y GraphQL Node.js
 
+_Inspirada en la API de Rick and Morty._
+
 > Aqui encontraras todas las provincias de argentina con sus respectivos datos. Ciudad capital, Coordenadas, Población, Superficie Km², Año de fundación, Fundador, Rango y Región Geográfica.
 
 - **Si encuentras algún error o crees que algo esta mal, no dudes en escribir un [inssue](https://github.com/Franqsanz/argentina-api/issues). 😊**
@@ -217,10 +219,8 @@ query {
 
 ---
 
-<!-- - Puedes encontrar esta misma documentación en el [Sitio Web](https://provincesargentinaapi.netlify.app/#documentacion). -->
+Puedes encontrar esta misma documentación en el [Sitio Web](https://argentina-api.netlify.app/#docs).
 
 ## Licencia
 
 [MIT](LICENSE)
-
-**Aún en Desarrollo...**
