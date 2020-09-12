@@ -28,7 +28,7 @@
     "helmet": "^3.21.2",
     "mongoose": "^5.7.12",
     "morgan": "^1.9.1",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.4",
